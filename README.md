@@ -1,19 +1,14 @@
-# R packages
+# R for Data Science
 
-This is code and text behind the [R for data science](http://r4ds.had.co.nz)
+This is code and text behind the [R for Data Science](http://r4ds.had.co.nz)
 book. 
 
-The site is built using [bookdown]
+The R packages used in this book can be installed via
 
 ```{r}
-devtools::install_github("yihui/knitr")
-devtools::install_github("rstudio/bookdown")
+devtools::install_github("hadley/r4ds")
 ```
+The site is built using [bookdown package](https://github.com/rstudio/bookdown).
+To create the site, you also need:
 
-jekyll, with a custom plugin to render `.rmd` files with
-knitr and pandoc. To create the site, you need:
-
-* jekyll gem: `gem install jekyll`
-* bookdown: `install_github("hadley/bookdown")`
 * [pandoc](http://johnmacfarlane.net/pandoc/)
-* [knitr](http://yihui.name/knitr/): `install.packages("knitr")`
