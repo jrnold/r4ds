@@ -413,6 +413,28 @@ if (y < 20) {
     argument that defaults to `lubridate::now()`. That will make it 
     easier to test your function.)
 
+```greet <- function(time = lubridate::now()) {
+  hr <- lubridate::hour(time)
+  # I don't know what to do about times after midnight, 
+  # are they evening or morning?
+  if (hr < 12) {
+    print("good morning")
+  } else if (hr < 17) {
+    print("good afternoon")
+  } else {
+    print("good evening")
+  }
+} 
+greet()
+#> [1] "good morning"
+greet(ymd_h("2017-01-08:05"))
+#> [1] "good morning"
+greet(ymd_h("2017-01-08:13"))
+#> [1] "good afternoon"
+greet(ymd_h("2017-01-08:20"))
+#> [1] "good evening"
+```
+
 1.  Implement a `fizzbuzz` function. It takes a single number as input. If
     the number is divisible by three, it returns "fizz". If it's divisible by
     five it returns "buzz". If it's divisible by three and five, it returns
