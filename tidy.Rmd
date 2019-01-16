@@ -418,7 +418,7 @@ treatment %>%
 
 1.  Compare and contrast the `fill` arguments to `spread()` and `complete()`. 
 
-1.  What does the direction argument to `fill()` do?
+1.  What does the `direction` argument to `fill()` do?
 
 ## Case Study
 
